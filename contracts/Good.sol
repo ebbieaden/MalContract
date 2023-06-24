@@ -9,6 +9,16 @@ contract Good {
         helper = Helper(_helper);
     }
 
+    /**
+     * To fix attackers from accessing this smart contract
+     */
+    // contract Good {
+    //     Helper public helper;
+    //     constructor() {
+    //         helper = new Helper()
+    //     }
+    // }
+
     function isUserEligible() public view returns(bool) {
         return helper.isUserEligible(msg.sender);
     }
